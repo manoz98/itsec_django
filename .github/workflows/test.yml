@@ -1,0 +1,27 @@
+name: First CI/CD Pipeline
+on:
+  push:
+    branches: 
+      - mainapp
+      - develop
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Hello world
+      run: |
+        echo "I am build stage"
+  
+  test:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Print Hello world
+      run: |
+        echo "I am test stage"
+  release:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Print Hello world
+      run: |
+        echo "I am release "
