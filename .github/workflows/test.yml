@@ -6,7 +6,7 @@ on:
       - develop
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: server1
     steps:
     - name: Print Hello world
       run: |
@@ -14,7 +14,7 @@ jobs:
         ip a
   test:
     needs: build
-    runs-on: ubuntu-latest 
+    runs-on: server1 
     steps:
     - name: Print Hello world
       run: |
@@ -22,7 +22,7 @@ jobs:
         ip a
   release:
     needs: test
-    runs-on: ubuntu-latest 
+    runs-on: server1
     steps:
     - name: Print Hello world
       run: |
