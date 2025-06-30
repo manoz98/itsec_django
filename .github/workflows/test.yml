@@ -11,6 +11,7 @@ jobs:
     - name: Print Hello world
       run: |
         echo "I am build stage"
+        ip a
   test:
     needs: build
     runs-on: ubuntu-latest 
@@ -18,9 +19,13 @@ jobs:
     - name: Print Hello world
       run: |
         echo "I am test stage"
+        ip a
   release:
+    needs: test
     runs-on: ubuntu-latest 
     steps:
     - name: Print Hello world
       run: |
         echo "I am release "
+        ip a
+        hostname
