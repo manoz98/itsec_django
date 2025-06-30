@@ -7,13 +7,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Print Hello world
       run: |
         echo "I am build stage"
-  
   test:
+    needs: build
     runs-on: ubuntu-latest 
     steps:
     - name: Print Hello world
