@@ -2,4 +2,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("DevOpse Operation Second ")
+    return HttpResponse("<h1> Hello IT Security Nepal <h1> ")
