@@ -5,27 +5,10 @@ on:
       - mainapp
       - develop
 jobs:
-  build:
-    runs-on: server1
-    steps:
-    - name: Print Hello world
-      run: |
-        echo "I am build stage"
-        ip a
-  test:
-    needs: build
-    runs-on: server1 
-    steps:
-    - name: Print Hello world
-      run: |
-        echo "I am test stage"
-        ip a
-  release:
-    needs: test
-    runs-on: server1
-    steps:
-    - name: Print Hello world
-      run: |
-        echo "I am release "
-        ip a
-        hostname
+  clone:
+     runs-on: server1
+     steps:
+      - name: Git clone
+        run: |
+          cd /home/ubuntu
+          git clone https://github.com/manoz98/itsec_django
