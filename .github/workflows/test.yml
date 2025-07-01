@@ -12,4 +12,4 @@ jobs:
       - name: Git clone
         run: |
           cd /home/ubuntu
-          git clone https://github.com/manoz98/itsec_django
+          git clone git@github.com:manoz98/itsec_django.git
